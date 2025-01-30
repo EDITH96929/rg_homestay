@@ -5,7 +5,7 @@ const rooms = [
   {
     title: "Luxury Super Delux",
     price: 299,
-    description:
+    description:  
       "Ipsor incididunt ut labore et dolore magna liqu Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
     status: "Available",
     payment: "30% Advanced",
