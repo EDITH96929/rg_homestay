@@ -1,23 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
-import Home from "./Home"
+import "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import "../src/styles/main.css";
 
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  )
+    <>
+      <Navbar />
+      <Hero />
+      {/* Other sections like Rooms, Reviews, etc. */}
+    </>
+  );
 }
 
-export default App
-
+export default App;
