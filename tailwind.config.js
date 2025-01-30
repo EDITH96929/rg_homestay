@@ -4,7 +4,7 @@ export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "app/**/*.
 export const theme = {
     extend: {
         colors: {
-            gold: {
+            gold: { 
                 500: "#B5965E",
             },
             border: "hsl(var(--border))",
