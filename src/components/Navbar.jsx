@@ -25,9 +25,7 @@ export default function Navbar() {
             <Link to="/reservation" className="nav-link">
               Reservation
             </Link>
-            <Link to="/news" className="nav-link">
-              News & Events
-            </Link>
+
             <Link to="/contact" className="nav-link">
               Contact
             </Link>
