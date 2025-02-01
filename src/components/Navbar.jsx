@@ -29,6 +29,10 @@ export default function Navbar() {
             <Link to="/contact" className="nav-link">
               Contact
             </Link>
+
+             <Link to="/contact" className="nav-link">
+              login
+            </Link>
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
