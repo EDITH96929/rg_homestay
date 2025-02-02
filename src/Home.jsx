@@ -60,4 +60,29 @@ function Home() {
         </div>
       </section>
 
-      
+      <section className="max-w-6xl mx-auto my-12">
+        <h2 className="text-2xl font-semibold text-center">Our Rooms</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          {rooms.map((room, index) => (
+            <div key={index} className={`bg-white p-6 rounded-lg shadow-md transition hover:shadow-lg ${selectedRoom === index ? 'border-2 border-indigo-500' : ''}`}>
+              <div className="h-40 bg-gray-200 rounded"></div>
+              <h3 className="text-xl font-semibold mt-4">{room.title}</h3>
+              <p className="text-sm text-gray-600 mt-2">{room.description}</p>
+              <ul className="mt-3 text-sm text-gray-500">
+                {room.amenities.map((amenity, i) => (
+                  <li key={i}>• {amenity}</li>
+                ))}
+              </ul>
+              <div className="flex justify-between items-center mt-4">
+                <span className="text-xl font-bold text-indigo-600">${room.price}</span>
+                <button className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition" onClick={() => setSelectedRoom(index)}>
+                  {selectedRoom === index ? "Selected" : "Book Now"}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
