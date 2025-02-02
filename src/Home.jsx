@@ -27,3 +27,37 @@ function Home() {
       amenities: ["Queen bed", "Work desk", "En-suite bathroom"],
     },
   ];
+
+ return (
+    <div className="bg-gray-100 min-h-screen text-gray-900">
+      <section className="bg-indigo-500 text-white py-16 text-center">
+        <h1 className="text-5xl font-bold">Welcome to Rovero</h1>
+        <p className="text-lg mt-3">Experience luxury and comfort like never before</p>
+      </section>
+
+      <section className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 className="text-2xl font-semibold text-center">Find Your Perfect Stay</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+          <div>
+            <label className="block text-sm font-medium">Check In</label>
+            <input type="date" className="w-full p-2 border rounded" value={checkIn} onChange={(e) => setCheckIn(e.target.value)} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Check Out</label>
+            <input type="date" className="w-full p-2 border rounded" value={checkOut} onChange={(e) => setCheckOut(e.target.value)} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Guests</label>
+            <select className="w-full p-2 border rounded" value={guests} onChange={(e) => setGuests(Number(e.target.value))}>
+              {[1, 2, 3, 4, 5].map((num) => (
+                <option key={num} value={num}>{num}</option>
+              ))}
+            </select>
+          </div>
+          <div className="flex items-end">
+            <button className="w-full bg-indigo-500 text-white py-2 rounded hover:bg-indigo-600 transition">Search</button>
+          </div>
+        </div>
+      </section>
+
+      
