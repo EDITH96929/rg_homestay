@@ -25,4 +25,4 @@ To get started with the RH Homestay project, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/rh-homestay.git
+   git clone https://github.com/EDITH96929/rh-homestay.git
